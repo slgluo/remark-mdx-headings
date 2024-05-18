@@ -1,28 +1,40 @@
 {
-  "name": "remark-mdx-heading",
-  "version": "1.0.0",
+  "name": "remark-mdx-headings",
+  "version": "1.0.1",
   "description": "A remark plugin for export heading from MDX",
   "author": "sunlg <slgluo@qq.com>",
-  "repository": "https://github.com/slgluo/remark-mdx-heading.git",
+  "repository": "https://github.com/slgluo/remark-mdx-headings.git",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "esno test/test.ts"
   },
   "files": [
     "dist"
   ],
-  "keywords": ["remark", "mdx", "markdown"],
+  "keywords": [
+    "remark",
+    "mdx",
+    "markdown"
+  ],
   "dependencies": {
     "estree-util-is-identifier-name": "^3.0.0",
     "estree-util-value-to-estree": "^3.1.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.17.0",
+    "@mdx-js/mdx": "^3.0.1",
     "@types/mdast": "^4.0.3",
+    "@types/node": "^20.12.12",
+    "@vcarl/remark-headings": "^0.1.0",
     "eslint": "^8.57.0",
+    "esno": "^4.7.0",
+    "remark-heading-id": "^1.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "unified": "^11.0.4"
